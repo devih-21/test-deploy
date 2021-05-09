@@ -1,0 +1,145 @@
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ ls
+node_modules  package.json  public  README.md  src  yarn.lock
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git status                  
+On branch master
+nothing to commit, working tree clean
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ yarn add gh-pages --save-dev
+yarn add v1.22.5
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@2.3.2: The platform "linux" is incompatible with this module.
+info "fsevents@2.3.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning " > @testing-library/user-event@12.8.3" has unmet peer dependency "@testing-library/dom@>=7.21.4".
+warning "react-scripts > @typescript-eslint/eslint-plugin > tsutils@3.20.0" has unmet peer dependency "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta".
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 9 new dependencies.
+info Direct dependencies
+└─ gh-pages@3.1.0
+info All dependencies
+├─ email-addresses@3.1.0
+├─ filename-reserved-regex@1.0.0
+├─ filenamify-url@1.0.0
+├─ filenamify@1.2.1
+├─ gh-pages@3.1.0
+├─ humanize-url@1.0.1
+├─ strip-outer@1.0.1
+├─ strip-url-auth@1.0.1
+└─ trim-repeated@1.0.0
+Done in 8.89s.
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ ls
+node_modules  package.json  public  README.md  src  yarn.lock
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ nano package.json               
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git remote add origin https://github.com/devih-21/test-deploy.git
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git push                                                         
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git push origin master
+Username for 'https://github.com': devih-21
+Password for 'https://devih-21@github.com': 
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (22/22), 211.63 KiB | 4.41 MiB/s, done.
+Total 22 (delta 0), reused 0 (delta 0)
+To https://github.com/devih-21/test-deploy.git
+ * [new branch]      master -> master
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ nano package.json
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ yarn run build              
+yarn run v1.22.5
+$ react-scripts build
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  41.34 KB  build/static/js/2.233aacbb.chunk.js
+  1.63 KB   build/static/js/3.4093d129.chunk.js
+  1.18 KB   build/static/js/runtime-main.c52589d7.js
+  594 B     build/static/js/main.3c2893a0.chunk.js
+  531 B     build/static/css/main.8c8b27cf.chunk.css
+
+The project was built assuming it is hosted at /test-deploy/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+Done in 29.49s.
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ nano package.json                         
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ yarn run deploy
+yarn run v1.22.5
+$ yarn run build
+$ react-scripts build
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  41.34 KB  build/static/js/2.233aacbb.chunk.js
+  1.63 KB   build/static/js/3.4093d129.chunk.js
+  1.18 KB   build/static/js/runtime-main.c52589d7.js
+  594 B     build/static/js/main.3c2893a0.chunk.js
+  531 B     build/static/css/main.8c8b27cf.chunk.css
+
+The project was built assuming it is hosted at /test-deploy/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+$ gh-pages -d build
+Published
+Done in 16.56s.
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git status            
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   package.json
+	modified:   yarn.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git add . 
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git commit -m"build"       
+[master e9553eb] build
+ 2 files changed, 76 insertions(+), 5 deletions(-)
+┌[devih~devih]-(/media/devih/1Tb BTVN/Workspace/ReactJs/test-deploy)-[branch: master]-
+└> ~ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.65 KiB | 77.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/devih-21/test-deploy.git
+   82fa7c6..e9553eb  master -> master
